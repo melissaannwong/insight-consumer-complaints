@@ -1,10 +1,4 @@
-import sh 
-import src
 
-├── README.md
-├── run.sh
-├── src
-│   └── consumer_complaints.py
 ├── input
 │   └── complaints.csv
 ├── output
