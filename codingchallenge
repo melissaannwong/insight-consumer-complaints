@@ -1,0 +1,63 @@
+├── README.md
+├── run.sh
+├── src
+│   └── consumer_complaints.py
+├── input
+│   └── complaints.csv
+├── output
+|   └── report.csv
+├── insight_testsuite
+    └── tests
+        └── test_1
+        |   ├── input
+        |   │   └── complaints.csv
+        |   |__ output
+        |   │   └── report.csv
+   
+
+import csv
+
+with open('complaint.csv', 'r') as file:
+    my_reader = csv.reader(file, delimiter=',')
+    for row in my_reader:
+        print(row)
+
+
+#Product
+>>> sorted(products)
+sorted_products = sorted(products)
+
+#Date
+>>> sorted(dates)
+sorted_dates = sorted(dates)
+
+import datetime
+year = datetime.date.today().year
+
+df['year'] = DatetimeIndex(df['birth_date']).year
+df.head()
+
+my_string = '12/1/11'
+my_date = datetime.strptime(my_string, "%Y-%m-%d")
+
+print(my_date)
+print('Type: ',type(my_date))
+
+print('Year: ', my_date.year)
+
+#Total Number Complaints
+df.groupby(["sorted_product", "my_date.year"]).my_date.year().reset_index(name="Total_Number_Complaints")
+
+#Total Number Companies
+df.groupby(["sorted_product", "my_date.year", "company"]).my_date.year().reset_index(name="Total_Number_Companies")
+
+
+
+
+
+#product (name should be written in all lowercase), year, total number of complaints received for that product and year,total number of companies receiving at least one complaint for that product and year
+
+data(['sorted_products'],['my_date.year'],['Total_Number_Complaints'],['Total_Number_Companies'])
+
+
+
